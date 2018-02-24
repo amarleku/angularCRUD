@@ -1,0 +1,104 @@
+{
+  "client": [
+    {
+      "id": 1,
+      "productId": 1,
+      "productName": "Astrit Marleku",
+      "city": "Kline",
+      "releaseDate": "2018/02/09",
+      "credit": "320",
+      "nextPayment": 22.95,
+      "imageUrl": "https://vignette.wikia.nocookie.net/tumblr-survivor-athena/images/7/7a/Blank_Avatar.png/revision/latest?cb=20161204161729"
+    },
+    {
+      "id": 2,
+      "productId": 2,
+      "productName": "Behar Simnica",
+      "city": "Prishtine",
+      "releaseDate": "2018/02/09",
+      "credit": "990",
+      "nextPayment": 150.95,
+      "imageUrl": "https://vignette.wikia.nocookie.net/tumblr-survivor-athena/images/7/7a/Blank_Avatar.png/revision/latest?cb=20161204161729"
+    },
+    {
+      "id": 3,
+      "productId": 3,
+      "productName": "Dhurim Satovci",
+      "city": "Prishtine",
+      "releaseDate": "2018/02/09",
+      "credit": "850",
+      "nextPayment": 115.95,
+      "imageUrl": "https://vignette.wikia.nocookie.net/tumblr-survivor-athena/images/7/7a/Blank_Avatar.png/revision/latest?cb=20161204161729"
+    },
+    {
+      "id": 4,
+      "productId": 4,
+      "productName": "Jeton Marleku",
+      "city": "Kline",
+      "releaseDate": "2018/02/09",
+      "credit": "748",
+      "nextPayment": 92.95,
+      "imageUrl": "https://vignette.wikia.nocookie.net/tumblr-survivor-athena/images/7/7a/Blank_Avatar.png/revision/latest?cb=20161204161729"
+    },
+    {
+      "id": 5,
+      "productId": 5,
+      "productName": "Leke Berisha",
+      "city": "Gjakove",
+      "releaseDate": "2018/02/09",
+      "credit": "92",
+      "nextPayment": 12.95,
+      "imageUrl": "https://vignette.wikia.nocookie.net/tumblr-survivor-athena/images/7/7a/Blank_Avatar.png/revision/latest?cb=20161204161729"
+    },
+    {
+      "id": 6,
+      "productId": 6,
+      "productName": "Yilmaz",
+      "city": "Gjakove",
+      "releaseDate": "2018/02/09",
+      "credit": "665",
+      "nextPayment": 29.95,
+      "imageUrl": "https://vignette.wikia.nocookie.net/tumblr-survivor-athena/images/7/7a/Blank_Avatar.png/revision/latest?cb=20161204161729"
+    },
+    {
+      "id": 7,
+      "productId": 7,
+      "productName": "Albion",
+      "city": "Gjakove",
+      "releaseDate": "2018/02/09",
+      "credit": "266",
+      "nextPayment": 77.95,
+      "imageUrl": "https://vignette.wikia.nocookie.net/tumblr-survivor-athena/images/7/7a/Blank_Avatar.png/revision/latest?cb=20161204161729"
+    },
+    {
+      "id": 8,
+      "productId": 8,
+      "productName": "Ardian",
+      "city": "Ferizaj",
+      "releaseDate": "2018/02/09",
+      "credit": "552",
+      "nextPayment": 52.95,
+      "imageUrl": "https://vignette.wikia.nocookie.net/tumblr-survivor-athena/images/7/7a/Blank_Avatar.png/revision/latest?cb=20161204161729"
+    },
+    {
+      "id": 9,
+      "productId": 9,
+      "productName": "Edon",
+      "city": "Podujev",
+      "releaseDate": "2018/02/09",
+      "credit": "458",
+      "nextPayment": 99.95,
+      "imageUrl": "https://vignette.wikia.nocookie.net/tumblr-survivor-athena/images/7/7a/Blank_Avatar.png/revision/latest?cb=20161204161729"
+    },
+    {
+      "id": 10,
+      "productId": 10,
+      "productName": "Adem",
+      "city": "Prizeren",
+      "releaseDate": "2018/02/09",
+      "credit": "663",
+      "nextPayment": 39.95,
+      "imageUrl": "https://vignette.wikia.nocookie.net/tumblr-survivor-athena/images/7/7a/Blank_Avatar.png/revision/latest?cb=20161204161729"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+<div class='panel panel-success' *ngIf='product'>
+    <div class='panel-heading'>
+        {{pageTitle + ': ' + product.productName}}
+    </div>
+
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-6'>
+                <div class='row'>
+                    <div class='col-md-3'><b>Name:</b></div>
+                    <div class='col-md-6'>{{product.productName}}</div>
+                </div>
+                <br>
+                <div class='row'>
+                    <div class='col-md-3'><b>City:</b></div>
+                    <div class='col-md-6'>{{product.city}}</div>
+                </div>
+                <br>
+                <div class='row'>
+                    <div class='col-md-3'><b>Relase Date:</b></div>
+                    <div class='col-md-6'>{{product.releaseDate}}</div>
+                </div>
+                <br>
+                <div class='row'>
+                    <div class='col-md-3'><b>Credit:</b></div>
+                    <div class='col-md-6'>{{product.credit|currency:'USD':true}}</div>
+                </div>
+                <br>
+                <div class='row'>
+                    <div class='col-md-3'><b>Next Payment:</b></div>
+                    <div class='col-md-6'>{{product.nextPayment|currency:'USD':true}}</div>
+                </div>
+                <div class='row'>
+                    
+                </div>
+            </div>
+
+            <div class='col-md-6'>
+                <img class='center-block img-responsive' 
+                     [style.width.px]='200' 
+                     [style.margin.px]='2' 
+                     [src]='product.imageUrl'
+                     [title]='product.productName'>
+            </div>
+        </div>
+    </div>
+    <div *ngIf='product' class="container">
+    <!-- edit form starts here -->
+    <h3>Edit Client</h3>
+    
+    <label for="fullName">Name: </label>
+    <input type="text" [(ngModel)]="product.productName" name="product.productName"><br><br>
+    <label for="city">City: </label>
+    <input type="text" [(ngModel)]="product.city" name="product.city"><br><br>
+    <label for="credit">Credit: </label>
+    <input type="text" [(ngModel)]="product.credit" name="product.credit"><br><br>
+            <!-- delete button  -->
+            <button onclick="alert('Edit Complete')"   class="btn btn-info">Edit</button>
+    </div>
+    <br>
+    <!-- the edit form ends here -->
+    <div class='panel-footer'>
+        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> Back
+        </a>
+    </div>
+</div>

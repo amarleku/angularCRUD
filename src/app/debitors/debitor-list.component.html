@@ -1,0 +1,92 @@
+<div class='panel panel-danger'>
+    <div class='panel-heading'>
+        <!-- page Title "Debitors List" -->
+        {{pageTitle}}
+    </div>
+    <div class='table-responsive'>
+        <table class='table' *ngIf='products && products.length'>
+            <thead>
+                <tr>
+                    <th>
+                        <!-- Hide and show all images of client -->
+                        <button class='btn btn-danger' (click)='toggleImage()'>
+                            {{showImage ? 'Hide' : 'Show'}} Image
+                        </button>
+                    </th>
+                    <th>Client</th>
+                    <th>City</th>
+                    <th>Relase Date</th>
+                    <th>Credit</th>
+                    <th>Next Payment</th>
+                    <th>Delete</th>
+                    <!-- <th>Edit</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let products of (products)?.reverse()">
+                    <td>
+                        <!-- call name on image of  client -->
+                        <img *ngIf='showImage' [src]='products.imageUrl' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
+                    </td>
+                    <td>
+                        <a [routerLink]="['/debitors', products.productId]">
+                            {{ products.productName }}
+                        </a>
+                    </td>
+                    <td>{{ products.city}}</td>
+                    <td>{{ products.releaseDate }}</td>
+                    <td>{{ products.credit | currency:'USD':true:'1.2-2'}}</td>
+                    <td>{{ products.nextPayment | currency:'USD':true:'1.2-2'}}</td>
+                    <td>
+                        <!-- delete button  -->
+                        <button (click)="deleteProduct(products)" class="btn btn-danger">Delete</button>
+                    </td>
+                    <!-- <td>
+                        <a [routerLink]="['/edit']">
+                            <button class="btn btn-success">Edit</button>
+                        </a>
+                    </td> -->
+                </tr>
+            </tbody>
+        </table>
+        <!-- begin register form  -->
+        <h1 align="center">Add new Client</h1>
+        <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+        <div *ngIf='products'>
+            <div id="register-form" class="table-responsive">
+                <div class="table">
+                    <form id="addProduct" name="addProduct" #products="ngForm" (ngSubmit)="addProduct(products.value)">
+                        <label>Name: </label>
+                        <input type="text" class="form-control" name="productName" id="products.productName" placeholder="name" ngModel>
+                       
+                        <label>City: </label>
+                        <input type="text" class="form-control" name="city" id="products.city" placeholder="city" ngModel>
+                       
+                        <label>Credit: </label>
+                        <input type="number" class="form-control" name="credit" id="products.credit" placeholder="Credit" minlength="1" max="1000" ngModel>
+                       
+                        <label>Date: </label>
+                        <input type="date" class="form-control" name="releaseDate" id="products.releaseDate" placeholder="date" ngModel>
+                        
+                        <label>Next Payment: </label>
+                        <input type="number" class="form-control" name="nextPayment" id="products.nextPayment" placeholder="nextPayment" minlength="1" max="1000" ngModel>
+                        <br>
+                        <input type="submit" class="btn btn-info" value="Add Product">
+                    </form> 
+                    <!-- end register form  -->
+                </div>
+                </div>
+            </div>
+            </div>
+            </div>
+          
+            <div *ngIf='errorMessage' class='alert alert-danger'>
+                Error: {{ errorMessage }}
+            </div>
+            <footer>
+                <p align="center">Copyright &copy;
+                    <span style="color:blue"> Solaborate</span>
+                </p>
+            </footer>

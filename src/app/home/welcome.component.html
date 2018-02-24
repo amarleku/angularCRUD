@@ -1,0 +1,50 @@
+﻿<div class="panel panel-danger">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div align="center">
+        <h3>
+            5 Most recent debitors
+        </h3>
+    </div>
+    <br>
+    <!-- filter 5 last client DESC -->
+    <div class="panel-body">
+        <div class="row">
+
+            <table class='table' *ngIf='products && products.length'>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Relase Date</th>
+                        <th>Credit</th>
+                        <th>Next Payment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- filter data 5 last and DESC -->
+                    <tr *ngFor="let client of (products ? products.slice(5): [])?.reverse()">
+                        <td>
+                            <!-- begin client profile -->
+                            <a [routerLink]="['/debitors', client.productId]">
+                                {{ client.productName }}
+                            </a>
+                        </td>
+                        <!-- end client profile  -->
+                        <td>{{ client.city}}</td>
+                        <td>{{ client.releaseDate }}</td>
+                        <td>{{ client.credit | currency:'USD':true:'1.2-2'}}</td>
+                        <td>{{ client.nextPayment | currency:'USD':true:'1.2-2'}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<footer>
+    <p align="center">Copyright &copy;
+        <span style="color:blue"> Solaborate</span>
+    </p>
+</footer>
